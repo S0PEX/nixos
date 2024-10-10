@@ -24,4 +24,25 @@
     # Formatter for Nix
     nixpkgs-fmt
   ];
+
+  # Theme settings
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Yaru-prussiangreen-dark";
+      package = pkgs.yaru-theme;
+    };
+
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+  };
 }
