@@ -6,6 +6,14 @@ name:
 , user
 }:
 
+let
+  # The config files for this system.
+  hardwareConfig = ../hardware/${name}.nix;
+  userConfig = ../users/${user}/nixos.nix;
+  userHMConfig = ../users/${user}/home-manager.nix;
+
+  home-manager = inputs.home-manager.nixosModules.home-manager;
+in
 nixpkgs.lib.nixosSystem {
   inherit system;
 
@@ -14,11 +22,20 @@ nixpkgs.lib.nixosSystem {
     { nixpkgs.config.allowUnfree = true; }
 
     # Load the main system configuration
-    ../hardware/${name}.nix    # Hardware-specific configuration
+    hardwareConfig # Hardware-specific configuration
+    userConfig # User-specific configuration
     ../nixos/configuration.nix # Main system configuration
 
-    # Load User configuration
-    ../users/${user}/nixos.nix # User-specific configuration
+    # Enable home-manager for managing user configurations
+    home-manager
+    {
+      home-manager.backupFileExtension = "hm-backup";
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.${user} = import userHMConfig {
+        inputs = inputs;
+      };
+    }
   ];
 
   specialArgs = inputs; # Pass all flake inputs (e.g., nixpkgs, nixpkgs-unstable)
