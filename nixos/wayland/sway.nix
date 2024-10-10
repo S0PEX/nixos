@@ -3,7 +3,8 @@
 {
   # System-wide packages
   environment.systemPackages = with pkgs; [
-    nwg-displays # Manage displays
+    nwg-look # GTK theme manager for Sway
+    nwg-displays # Manage displays for Sway
     grim # Screenshot functionality
     slurp # Selection tool for screenshots
     wl-clipboard # Clipboard utilities (wl-copy, wl-paste) for Wayland
