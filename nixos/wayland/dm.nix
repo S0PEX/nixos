@@ -10,6 +10,11 @@
     wayland = true;
   };
 
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   wayland.enable = true;
+  # };
+
   # Configure the keyboard layout for X11
   services.xserver.xkb = {
     layout = "de"; # Set layout to German
