@@ -7,6 +7,11 @@
     xwayland.enable = true;
   };
 
+  # Add default packages
+  environment.systemPackages = [
+    pkgs.kitty
+  ];
+
   environment.sessionVariables = {
     # If cursor becomes invisible
     WLR_NO_HARDWARE_CURSORS = "1";
