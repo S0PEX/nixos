@@ -26,10 +26,10 @@ To get started with this configuration on a NixOS system, follow these steps:
    $ cd ~/nixos-config
    ```
 
-2. Copy the hardware configuration of your current build to the /hardware directory:
+2. Copy the default configuration and hardware configuration of your current build to the `/hardware/{systemName}` directory:
 
    ```bash
-   $ sudo cp /etc/nixos/hardware-configuration.nix ./hardware/
+   $ sudo cp /etc/nixos/ ./hardware/{systemName}
    ```
 
    **Warning**: Make sure to rename your `hardware-configuration.nix` to something meaningful and update the `flake.nix` configuration accordingly.
@@ -39,7 +39,7 @@ To get started with this configuration on a NixOS system, follow these steps:
    ```nix
    # Define NixOS configurations
    # Usage of mkSystem: mkSystem "name of the hardware configuration file under hardware/"
-   nixosConfigurations.nixos = mkSystem "vm" {  # Binds hardware/vm.nix to this configuration
+   nixosConfigurations.nixos = mkSystem "vm" {  # Binds hardware/systemName/ to this configuration
      user = "s0pex";  # Specifies the user for the configuration; this option is used to load the configs from users/user
    };
    ```
