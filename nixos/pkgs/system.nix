@@ -1,11 +1,11 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   # System packages for Fish shell and related plugins
   environment.systemPackages = with pkgs; [
-    firefox-bin # Firefox web browser
-    librewolf # LibreWolf web browser
-    git # Distributed version control system
+    firefox-bin
+    librewolf
+    git
 
     # Console utilities
     fishPlugins.done # Completion plugin for Fish
@@ -22,12 +22,18 @@
     # System utilities
     htop
     killall
-    python3 # Python programming language
+    python3
     lm_sensors # Hardware monitoring tool
     pulseaudio # PulseAudio sound server, we only use it for its ctl to interact with pipewire
 
+    # Multimedia utilities
+    vlc
+
     # Network shares
     cifs-utils
+  ] ++
+  [
+    pkgs-unstable.ghostty
   ];
 
   # Archive utility required for Thunar archive plugin
