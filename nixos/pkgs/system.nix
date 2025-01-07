@@ -36,6 +36,9 @@
     pkgs-unstable.ghostty
   ];
 
+  # SSH Agent
+  programs.ssh.startAgent = true;
+
   # Archive utility required for Thunar archive plugin
   programs.file-roller.enable = true;
 
