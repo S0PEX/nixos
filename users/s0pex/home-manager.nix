@@ -19,24 +19,25 @@
     chezmoi # Dotfile manager
 
     # Communications
-    discord # Discord chat client
+    discord
     ferdium # Multi service chat client
+    thunderbird-bin
 
     # Multimedia
     youtube-music
 
     # Writing tools and editors
-    vscode # Visual Studio Code
-    code-cursor # Cursor AI Editor
-    texliveFull # Full TeX Live distribution
+    vscode
+    code-cursor
+    texliveFull
 
     # Programming languages and development tools
     jetbrains.goland
     citrix_workspace
 
     go # Go programming language
-    nodejs_20 # Node.js
-    pnpm # Node.js package manager
+    nodejs_20
+    pnpm
     deno # Alternative JavaScript runtime
     nixpkgs-fmt # Formatter for Nix
 
