@@ -32,6 +32,7 @@
 
     # Programming languages and development tools
     jetbrains.goland
+    citrix_workspace
 
     go # Go programming language
     nodejs_20 # Node.js
