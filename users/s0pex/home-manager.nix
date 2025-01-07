@@ -31,6 +31,8 @@
     texliveFull # Full TeX Live distribution
 
     # Programming languages and development tools
+    jetbrains.goland
+
     go # Go programming language
     nodejs_20 # Node.js
     pnpm # Node.js package manager
