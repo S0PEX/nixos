@@ -43,9 +43,6 @@
 
     # Git clients
     gitkraken
-
-    # Themes
-    yaru-theme
   ];
 
   # Terminal extension
@@ -63,9 +60,9 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "application/xhtml+xml" = "librewolf.desktop";
       "text/html" = "librewolf.desktop";
       "text/xml" = "librewolf.desktop";
+      "application/xhtml+xml" = "librewolf.desktop";
       "x-scheme-handler/ftp" = "librewolf.desktop";
       "x-scheme-handler/http" = "librewolf.desktop";
       "x-scheme-handler/https" = "librewolf.desktop";
@@ -73,11 +70,25 @@
   };
 
   # Theme settings
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Original-Classic";
+    size = 22;
+  };
+
   gtk = {
     enable = true;
+
     theme = {
-      name = "Yaru-prussiangreen-dark";
-      package = pkgs-unstable.yaru-theme;
+      name = "Juno-ocean";
+      package = pkgs-unstable.juno-theme;
+    };
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs-unstable.papirus-icon-theme;
     };
 
     # Prefer dark theme for both GTK3 and GTK4
