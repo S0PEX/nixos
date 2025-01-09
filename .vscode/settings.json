@@ -15,6 +15,7 @@
     "lib",
     "scripts",
     "nixos",
-    "s0pex"
+    "s0pex",
+    "nvidia"
   ]
 }

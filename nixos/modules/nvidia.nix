@@ -35,5 +35,12 @@
       # Default to stable driver version
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
+
+    # Fixes for VA-API with nvidia and other software that uses OpenGL
+    environment.sessionVariables = {
+      LIBVA_DRIVER_NAME = "nvidia"; # Use nvidia driver for VAAPI
+      GBM_BACKEND = "nvidia-drm"; # Use nvidia-drm backend for GBM
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Use nvidia GLX vendor library
+    };
   };
 }
