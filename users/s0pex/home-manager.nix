@@ -48,10 +48,15 @@
     yaru-theme
   ];
 
-  # Starship terminal extension
-  programs.fish.enable = true; # Enable Fish shell to ensure compatibility
+  # Terminal extension
+  programs.fish.enable = true;
   programs.starship = {
     enable = true;
+  };
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
   };
 
   # Default applications
