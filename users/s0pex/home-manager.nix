@@ -28,6 +28,7 @@
 
     # Writing tools and editors
     vscode
+    obsidian
     code-cursor
     texliveFull
 
