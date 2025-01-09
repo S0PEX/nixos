@@ -72,7 +72,7 @@
   # Theme settings
   home.pointerCursor = {
     gtk.enable = true;
-    x11.enable = true;
+    x11.enable = true; # Hyprland is falling back to X11's XCURSOR_THEME if it's not set, otherwise the cursor theme is not constantly applied to all applications
     package = pkgs.bibata-cursors;
     name = "Bibata-Original-Classic";
     size = 22;
