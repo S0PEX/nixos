@@ -31,18 +31,18 @@
     code-cursor
     texliveFull
 
-    # Programming languages and development tools
+    # Development tools
+    gitkraken
     jetbrains.goland
     citrix_workspace
 
-    go # Go programming language
-    nodejs_20
-    pnpm
+    # Programming languages and runtimes
+    go
+    bun # Alternative JavaScript runtime
     deno # Alternative JavaScript runtime
+    pnpm
+    nodejs_22
     nixpkgs-fmt # Formatter for Nix
-
-    # Git clients
-    gitkraken
   ];
 
   # Terminal extension
