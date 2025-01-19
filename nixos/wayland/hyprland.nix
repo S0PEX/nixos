@@ -26,6 +26,7 @@
   environment.systemPackages = with pkgs; [
     swaynotificationcenter # Notification daemon
     hyprlock # Screen locker
+    grim # Screenshot functionality 
     swww # Wallpaper utility
     waybar # Status bar for Sway
     fuzzel # Dmenu replacement for launching apps
