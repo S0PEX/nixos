@@ -25,6 +25,7 @@
 
     # Multimedia
     youtube-music
+    obs-studio
 
     # Writing tools and editors
     vscode
@@ -53,6 +54,7 @@
   programs.starship = {
     enable = true;
   };
+
   programs.zoxide = {
     enable = true;
     enableBashIntegration = true;
